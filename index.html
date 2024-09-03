@@ -3,83 +3,93 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BritishMinute Portfolio</title>
+    <title>BritishMinute - Coding Virtuoso</title>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js"></script>
 </head>
 <body>
-    <div id="loader">
-        <div class="loader-content">
-            <h1>Loading...</h1>
-        </div>
-    </div>
-
-    <header id="main-header">
-        <div class="container">
-            <h1 class="logo">BritishMinute</h1>
-            <nav>
-                <ul>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#projects">Projects</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </nav>
-        </div>
+    <div id="particle-container"></div>
+    <div id="glitch-overlay"></div>
+    
+    <header>
+        <nav>
+            <div class="logo">BM</div>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="menu-toggle">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+        </nav>
     </header>
 
-    <section id="hero">
-        <div class="hero-content">
-            <h1 id="hero-title"></h1>
-            <p>Web Developer • Designer • Creator</p>
-        </div>
-    </section>
+    <main>
+        <section id="home">
+            <h1 class="glitch" data-text="BritishMinute">BritishMinute</h1>
+            <div id="tagline"></div>
+            <div class="cta-container">
+                <a href="#projects" class="cta-button">View Projects</a>
+                <a href="#contact" class="cta-button secondary">Contact Me</a>
+            </div>
+        </section>
 
-    <section id="about" class="section">
-        <div class="container">
+        <section id="about">
             <h2>About Me</h2>
-            <p>Hi, I'm a web developer with a passion for creating beautiful and functional websites. Let's make something amazing together.</p>
-        </div>
-    </section>
+            <p>As a coding virtuoso, I transform complex problems into elegant solutions. My projects demonstrate my passion for pushing technological boundaries and creating impactful applications that redefine user experiences.</p>
+            <div id="tech-orbit"></div>
+        </section>
 
-    <section id="projects" class="section">
-        <div class="container">
-            <h2>My Projects</h2>
-            <div class="project-grid">
+        <section id="projects">
+            <h2>Featured Projects</h2>
+            <div class="project-showcase">
                 <div class="project">
-                    <img src="project1.jpg" alt="Project 1">
-                    <h3>Project 1</h3>
-                    <p>Brief description of Project 1.</p>
-                    <a href="https://github.com/BritishMinute/project1" class="btn">View on GitHub</a>
+                    <h3>Twitch Chat Voice</h3>
+                    <p>An innovative application that brings Twitch chat to life through voice synthesis, enhancing streamer-viewer interaction.</p>
+                    <div id="twitch-chat-demo" class="project-demo"></div>
+                    <a href="https://github.com/BritishMinute/Twitch-Chat-Voice" class="project-link" target="_blank">View on GitHub</a>
                 </div>
                 <div class="project">
-                    <img src="project2.jpg" alt="Project 2">
-                    <h3>Project 2</h3>
-                    <p>Brief description of Project 2.</p>
-                    <a href="https://github.com/BritishMinute/project2" class="btn">View on GitHub</a>
+                    <h3>Black and White Human Sprite Generator</h3>
+                    <p>A cutting-edge tool that transforms video input into stylized black and white human sprites, perfect for game development and digital art.</p>
+                    <div id="sprite-gen-demo" class="project-demo"></div>
+                    <a href="https://github.com/BritishMinute/Black-and-White-Human-Sprite-From-Video" class="project-link" target="_blank">View on GitHub</a>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section id="contact" class="section">
-        <div class="container">
-            <h2>Contact Me</h2>
-            <p>If you'd like to get in touch, feel free to drop me an email at <a href="mailto:cromartyroan@gmail.com">cromartyroan@gmail.com</a></p>
-        </div>
-    </section>
+        <section id="skills">
+            <h2>Technical Prowess</h2>
+            <div id="skills-graph"></div>
+        </section>
+
+        <section id="contact">
+            <h2>Let's Connect</h2>
+            <p>Ready to collaborate on groundbreaking projects? Let's turn ideas into reality!</p>
+            <a href="mailto:cromartyroan@gmail.com" class="cta-button">Initiate Contact</a>
+            <div id="network-visualization"></div>
+        </section>
+    </main>
 
     <footer>
-        <div class="container">
-            <p>&copy; 2024 BritishMinute. All Rights Reserved.</p>
-            <div class="social-icons">
-                <a href="#"><i class="fab fa-github"></i></a>
-                <a href="#"><i class="fab fa-linkedin"></i></a>
-                <a href="#"><i class="fab fa-twitter"></i></a>
-            </div>
+        <p>© 2024 BritishMinute. All Rights Reserved.</p>
+        <div class="social-icons">
+            <a href="https://github.com/BritishMinute" aria-label="GitHub" target="_blank">
+                <i class="fab fa-github"></i>
+            </a>
         </div>
     </footer>
 
-    <script src="scripts.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.0.0/d3.min.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
